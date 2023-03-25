@@ -21,8 +21,8 @@ Save the Clean data to the file
 # CODE
 ```
 /* 
-Name : Aakash H
-Register Number : 212220040002
+Name : santhosh j
+Register Number : 2122200220040
 **Data Cleaning - Data_set.csv**
 import numpy as np
 import pandas as pd
