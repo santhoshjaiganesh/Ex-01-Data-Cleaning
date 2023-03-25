@@ -20,90 +20,49 @@ Save the Clean data to the file
 
 # CODE
 ```
-/* 
-Name : santhosh j
-Register Number : 2122200220040
-**Data Cleaning - Data_set.csv**
-import numpy as np
 import pandas as pd
-import seaborn as sbn
-df = pd.read_csv("/content/Data_set.csv")
+df=pd.read_csv("/content/Loan_data.csv")
 print(df)
 df.head(10)
 df.info()
 df.isnull()
 df.isnull().sum()
-df['show_name'] = df['show_name'].fillna(df['aired_on'].mode()[0])
-df['aired_on'] = df['aired_on'].fillna(df['aired_on'].mode()[0])
-df['original_network'] = df['original_network'].fillna(df['aired_on'].mode()[0])
+df['Loan_ID']=df['Loan_ID'].fillna(df['Dependents'].mode()[0])
+df['Dependents']=df['Dependents'].fillna(df['Dependents'].mode()[0])
+df['Education']=df['Education'].fillna(df['Dependents'].mode()[0])
 df.head()
-df['rating'] = df['rating'].fillna(df['rating'].mean())
-df['current_overall_rank'] = df['current_overall_rank'].fillna(df['current_overall_rank'].mean())
+df['ApplicantIncome']=df['ApplicantIncome'].fillna(df['ApplicantIncome'].mean())
+df['Loan_Amount_Term']=df['Loan_Amount_Term'].fillna(df['Loan_Amount_Term'].mean())
 df.head()
-df['watchers'] = df['watchers'].fillna(df['watchers'].median())
+df['Credit_History']=df['Credit_History'].fillna(df['Credit_History'].median())
 df.head()
 df.info()
 df.isnull().sum()
-
-**Data Cleannig - Loan_data.csv**
-data = pd.read_csv("/content/Loan_data.csv")
-print(data)
-data.head(5)
-data.isnull()
-data.isnull().sum()
-data['Gender'] = data["Gender"].fillna(data['Gender'].mode()[0])
-data['Dependents'] = data["Dependents"].fillna(data['Dependents'].mode()[0])
-data['Self_Employed'] = data["Self_Employed"].fillna(data['Self_Employed'].mode()[0])
-data['Credit_History'] = data["Credit_History"].fillna(data['Credit_History'].mode()[0])
-data.head()
-data['LoanAmount']=data['LoanAmount'].fillna(data['LoanAmount'].median())
-data.head()
-data['Loan_Amount_Term']=data['Loan_Amount_Term'].fillna(data['Loan_Amount_Term'].mean())
-data.head()
-data.info()
-data.isnull().sum()
-*/
 ```
 # OUPUT
-## Data Cleaning - Data_set.csv
-![Data Cleaning](/images/img.png)
 
-## Before Cleaning
-![Data Cleaning](/images/img2.png)
-![Data Cleaning](/images/img3.png)
+## DATA:
+![D1](https://user-images.githubusercontent.com/93427345/189853010-ece586db-7278-40ce-bb06-c3daa5124589.PNG)
+![D2](https://user-images.githubusercontent.com/93427345/189853155-7123b879-8a57-404c-8425-1dcd18e15079.PNG)
 
-## Mode
-![Data Cleaning](/images/mode.png)
+## NON NULL BEFORE:
+![D3](https://user-images.githubusercontent.com/93427345/189853227-eac7d433-1ce2-48fe-b5d5-ccdc942217b7.PNG)
+![D4](https://user-images.githubusercontent.com/93427345/189853244-77163773-533d-41f6-8fd7-8cf29d196659.PNG)
+![D5](https://user-images.githubusercontent.com/93427345/189853268-3be3b328-36a2-460e-ac64-99c007a46b26.PNG)
 
-## Mean
-![Data Cleaning](/images/mean.png)
+## MODE:
+![D6](https://user-images.githubusercontent.com/93427345/189853307-74a8bb98-8e83-4387-85f9-af7f1450f44c.PNG)
 
-## Median
-![Data Cleaning](/images/median.png)
+## MEAN:
+![D7](https://user-images.githubusercontent.com/93427345/189853343-dcd1ba3c-c326-48a6-aece-385d9182479f.PNG)
 
-## After Cleaning
-![Data Cleaning](/images/img4.png)
+## MEDIAN:
+![D8](https://user-images.githubusercontent.com/93427345/189853367-176af084-ac3c-4e10-b96c-a0ae21a5ce63.PNG)
 
-## Data Cleaning - Loan_data.csv
-![Data Cleaning](/images/image1.png)
-
-## Before Cleaning
-![Data Cleaning](/images/image2.png)
-![Data Cleaning](/images/image3.png)
-
-## Mode
-![Data Cleaning](/images/mode2.png)
-
-## Mean
-![Data Cleaning](/images/mean2.png)
-
-## Median
-![Data Cleaning](/images/median2.png)
-
-## After Cleaning
-![Data Cleaning](/images/image4.png)
+## NON NULL AFTER:
+![D9](https://user-images.githubusercontent.com/93427345/189853390-627fd2bf-81b5-4c9f-9807-a8100af1e2ee.PNG)
+![D10](https://user-images.githubusercontent.com/93427345/189853415-97baa3de-7c06-4c4d-b673-10d9f91fc30a.PNG)
 
 # RESULT
-Thus the given data is read, cleansed and the cleaned data is saved into the file.
 
-
+Thus, the given data is read, cleansed and the cleansed data is saved into the file.
